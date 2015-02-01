@@ -1,36 +1,98 @@
 \documentclass[letterpaper, 12pt]{article}
-\usepackage[margin=0.25in]{geometry}
+\usepackage[top=0in, bottom=-.1in, left=0in, right=0in]{geometry}
 
-\begin{document}
-\newcommand{\flashcard}[7]{
-\hbox{%
-\vbox to 2in{%
-\small%
-\hbox to 3.75in{\hfill#1}%
-\normalsize%
-\vskip 20pt%
+\newbox\boxfront
+\newbox\boxback
+\newbox\boxlastfront
+\newbox\boxa
+\newbox\boxb
+\newbox\boxc
+\newbox\boxd
+\newbox\boxe
+\newbox\boxf
+\newbox\boxg
+\newbox\boxh
+
+\count10 = 0%
+
+\begin{document}%
+\newcommand{\flashcardfront}[3]{%
+\hbox to 4.25in{%
+\hskip 0.25in%
+\vbox to 2.75in{%
+\vskip 0.25in%
+\hbox to 3.75in{\small\hss#1}%
+\vskip 0.25in%
 \hbox to 3.75in{\hfill \mbox{\LARGE #2}\hfill}%
-\vfill
-\hbox to 3.75in{\hfill \parbox{3in}{#3\hfill}\hfill}%
-\vfill%
-}%
-\vbox to 2in{\hbox to .5in{\hfill}}%
-\vbox to 2in{%
-\vfill%
-\hbox to 3.75in{\hfill\parbox{3in}{#4\hfill}\hfill}%
-\vfill
-\hbox to 3.75in{\hfill\parbox{3in}{Garnish: #5\hfill}\hfill}%
-\vfill
-\hbox to 3.75in{\hfill\parbox{3in}{Instructions: #6\hfill}\hfill}%
-\vfill%
-\small%
-\hbox to 3.75in{\hfill page: #7}%
-\normalsize%
+\vss%
+\hbox to 3.75in{\hfill \parbox{3.75in}{#3\hfill}\hfill}%
+\vss%
+\vskip 0.25in%
 }%
 }%
-\hbox{\vbox to .5in{\hfill}}%
 }%
-
+\newcommand{\flashcardback}[4]{%
+\vbox to 2.75in{%
+\vskip 0.25in%
+\hbox to 3.75in{\hfill\parbox{3in}{#1\hfill}\hfill}%
+\vss%
+\hbox to 3.75in{\hfill\parbox{3in}{Garnish: #2\hfill}\hfill}%
+\vss%
+\hbox to 3.75in{\hfill\parbox{3in}{Instructions: #3\hfill}\hfill}%
+\vss%
+\hbox to 3.75in{\small\hfill page: #4}%
+\vskip 0.25in%
+}%
+}%
+\newcommand{\flashcard}[7]{%
+\setbox\boxfront\vbox{\flashcardfront{#1}{#2}{#3}}%
+\setbox\boxback\vbox{\flashcardback{#4}{#5}{#6}{#7}}%
+\ifnum\count10 = 0%
+\setbox\boxlastfront\box\boxfront%
+\setbox\boxa\box\boxback%
+\else%
+\ifnum\count10 = 1%
+\hbox{\box\boxlastfront\box\boxfront}%
+\setbox\boxb\box\boxback%
+\else%
+\ifnum\count10 = 2%
+\setbox\boxlastfront\box\boxfront%
+\setbox\boxc\box\boxback%
+\else%
+\ifnum\count10 = 3%
+\hbox{\box\boxlastfront\box\boxfront}%
+\setbox\boxd\box\boxback%
+\else%
+\ifnum\count10 = 4%
+\setbox\boxlastfront\box\boxfront%
+\setbox\boxe\box\boxback%
+\else%
+\ifnum\count10 = 5%
+\hbox{\box\boxlastfront\box\boxfront}%
+\setbox\boxf\box\boxback%
+\else%
+\ifnum\count10 = 6%
+\setbox\boxlastfront\box\boxfront%
+\setbox\boxg\box\boxback%
+\else%
+\ifnum\count10 = 7%
+\hbox{\box\boxlastfront\box\boxfront}%
+\setbox\boxh\box\boxback%
+\hbox{\box\boxb\box\boxa}%
+\hbox{\box\boxd\box\boxc}%
+\hbox{\box\boxf\box\boxe}%
+\hbox{\box\boxh\box\boxg}%
+\count10 = -1%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+\fi%
+\advance\count10 by 1%
+}%
 \flashcard{Traditional}{Old Fashioned}{Whiskey with some sweetness and aroma added.  The original cocktail.}{%
 2 oz. rye or bourbon whiskey
 
