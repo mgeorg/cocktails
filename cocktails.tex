@@ -32,16 +32,19 @@
 }%
 }%
 \newcommand{\flashcardback}[4]{%
+\hbox to 4.25in{%
+\hskip 0.25in%
 \vbox to 2.75in{%
 \vskip 0.25in%
-\hbox to 3.75in{\hfill\parbox{3in}{#1\hfill}\hfill}%
+\hbox to 3.75in{\hfill\parbox{3.75in}{#1\hfill}\hfill}%
 \vss%
-\hbox to 3.75in{\hfill\parbox{3in}{Garnish: #2\hfill}\hfill}%
+\hbox to 3.75in{\hfill\parbox{3.75in}{Garnish: #2\hfill}\hfill}%
 \vss%
-\hbox to 3.75in{\hfill\parbox{3in}{Instructions: #3\hfill}\hfill}%
+\hbox to 3.75in{\hfill\parbox{3.75in}{Instructions: #3\hfill}\hfill}%
 \vss%
 \hbox to 3.75in{\small\hfill page: #4}%
 \vskip 0.25in%
+}%
 }%
 }%
 \newcommand{\flashcard}[7]{%
@@ -99,6 +102,23 @@
 1/4 oz. simple syrup
 
 2 dashes Angostura bitters}{lemon twist}{Build in old fashioned glass.}{26}%
+\flashcard{Traditional}{Tuxedo Cocktail}{%
+Only traditional spirits make this surprising and surprisingly old cocktail.
+}{%
+1 oz. old tom gin
+
+1 oz. dry vermouth
+
+1 tsp. absinthe
+
+1 tsp. maraschino liqueur
+
+2 dashes orange bitters
+}{%
+Maraschino cherry
+}{%
+Stir with ice and strain into chilled cocktail glass.  Garnish.
+}{104}%
 \flashcard{Traditional}{Manhattan}{Whiskey with some sweetness and spice.  One of the first cocktails.  A little more complex than an old fashioned.}{%
 2 oz. rye whiskey
 
@@ -199,6 +219,21 @@ lemon wedge
 }{%
 Shake with ice and strain into a chilled old fashioned glass.  Garnish with lemon.
 }{80}%
+\flashcard{Modern}{Bitter Elder}{%
+Tastes remarkably like grapfruit juice, particularly considering there isn't any in it.
+}{%
+1 1/2 oz. gin
+
+3/4 oz. Elderflower liqueur
+
+3/4 oz. Campari
+
+1/2 oz. lemon juice
+}{%
+none
+}{%
+Shake with ice and strain into a chilled cocktail glass.
+}{online}%
 \flashcard{Modern}{Long Island Iced Tea}{%
 A dangerously strong drink that tastes surprisingly like sweet iced tea.
 }{%
@@ -297,7 +332,7 @@ Rim cocktail glass.
 Shake with ice and strain into cocktail glass.
 Garnish
 }{113}%
-\flashcard{Mocktail}{Berry Soda}{%
+\flashcard{Alcohol Free}{Berry Soda}{%
 Muddled berries with honey and ginger.  Very delicious.
 }{%
 4 blackberries (or Raspberries)
@@ -312,7 +347,7 @@ blackberry and lemon wheel
 }{%
 Muddle berries with honey and lemon juice.  Add ice and shake.  Strain into ice filled pilsner glass.  Top with ginger ale and stir briefly.  Garnish.
 }{294}%
-\flashcard{Mocktail}{Polish Soda}{%
+\flashcard{Alcohol Free}{Polish Soda}{%
 A Raspberry and lemon soda.
 }{%
 1 oz. fresh lemon juice
@@ -327,7 +362,7 @@ none
 }{%
 Stir first three ingredients in collins glass. Add ice, fill with water, and stir again.
 }{298}%
-\flashcard{Mocktail}{Lime Cooler}{%
+\flashcard{Alcohol Free}{Lime Cooler}{%
 A real tonic.
 }{%
 1/2 oz. fresh lime juice
@@ -338,7 +373,7 @@ Lime wedge
 }{%
 Add juice to ice filled collins glass.  Fill with tonic water and stir.  Garnish.
 }{298}%
-\flashcard{Mocktail}{Orange and Tonic}{%
+\flashcard{Alcohol Free}{Orange and Tonic}{%
 Simple but good: orange juice and tonic water.
 }{%
 3 oz. fresh orange juice
@@ -349,7 +384,7 @@ Lime wedge
 }{%
 Add juice to ice filled collins glass.  Fill with tonic water and stir.  Garnish.
 }{298}%
-\flashcard{Mocktail}{Pomegranate Almond Soda}{%
+\flashcard{Alcohol Free}{Pomegranate Almond Soda}{%
 Pomegranate and almond, a perfect combination.
 }{%
 1 oz. pomegranate juice
@@ -362,7 +397,7 @@ lime wedge
 }{%
 Pour into ice filled pilsner glass and stir briefly.  Add lime.
 }{299}%
-\flashcard{Mocktail}{Pineapple Mint Soda}{%
+\flashcard{Alcohol Free}{Pineapple Mint Soda}{%
 Pineapple and mint.  Tart and sweet with great aroma.
 }{%
 2 oz. pineapple juice
@@ -377,7 +412,7 @@ fresh mint sprigs
 }{%
 Shake first three ingredients with ice and strain into ice filled pilsner glass.  Top with soda water and stir briefly.  Garnish.
 }{299}%
-\flashcard{Mocktail}{Rumless Rickey}{%
+\flashcard{Alcohol Free}{Rumless Rickey}{%
 Tart, sweet, and complex.  One of the best.
 }{%
 1 oz. fresh lime juice
@@ -496,15 +531,13 @@ Fruity and floral.  A complicated fizz.
 
 3/4 oz. simple syrup
 
-1 oz. Lillet Blanc
-
-1 oz. gin
+1 oz. Lillet Blanc and 1 oz. gin
 
 2 oz. chilled sparkling wine
 }{%
 (black)berries
 }{%
-Muddle berries with lemon and syrup.  Add Lillet Blanc and gin and shake with ice.  Strain into chilled champagne flute, top with sparkling wine, and garnish.
+Muddle berries with lemon and syrup.  Shake with ice and strain into chilled champagne flute. Top with sparkling wine and garnish.
 }{284}%
 \flashcard{Champagne Cocktail}{The Champagne Cocktail}{%
 I guess this is the champagne cocktail.  Despite its name, it isn't just champagne.  Note: substitute an orange twist for the lemon twist and you have a ``London Special.''
@@ -534,7 +567,7 @@ Just like grandma used to make for Thanksgiving.
 }{%
 3 fresh cranberries
 }{%
-Muddle ingredients.  Add champagne and ice and gently fold.  Strain into chilled champagne flute.  Top with a splash of champagne.  Float 3 cranberries on top.
+Muddle. Add champagne and ice and gently fold.  Strain into chilled flute and top with champagne splash.  Float 3 cranberries.
 }{286}%
 \flashcard{Champagne Cocktail}{Death in the Afternoon}{%
 You like anise, so this cocktail is perfect for you.
@@ -725,4 +758,141 @@ lemon twist
 }{%
 Add first three ingredients to champagne flute.  Add champagne.  Garnish.
 }{219}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Cocktail}{Something}{%
+Snarky remarks.
+}{%
+1 something
+
+1 oz. something else
+}{%
+garnish
+}{%
+instructions
+}{page number}%
+\flashcard{Last}{Last}{%
+Last
+}{%
+Last
+}{%
+Last
+}{%
+Last
+}{Last}%
+%
+%
+%
+%
+%
+%
+%
 \end{document}
